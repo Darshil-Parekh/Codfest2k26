@@ -1,0 +1,147 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    scroll-behavior:smooth;
+    overflow-x:hidden;
+    background: linear-gradient(-45deg, #0d6efd, #6610f2, #0dcaf0, #212529);
+    background-size:400% 400%;
+    animation:gradientBG 12s ease infinite;
+    color:white;
+}
+
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+
+section,
+header{
+    background:transparent !important;
+}
+
+
+
+.navbar{
+    background:rgba(255,255,255,0.08) !important;
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar small{
+    color:white !important;
+}
+
+.navbar .nav-link:hover{
+    color:#00ffff !important;
+}
+
+
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+}
+
+h1,h2,h3,h5{
+    color:white;
+    text-shadow:0 0 15px rgba(255,255,255,0.4);
+}
+
+.text-muted,
+small{
+    color:rgba(255,255,255,0.75) !important;
+}
+
+
+
+.card,
+.feature-card,
+.speaker{
+    background:rgba(255,255,255,0.08) !important;
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.2) !important;
+    color:white !important;
+    transition:0.4s ease;
+}
+
+.card:hover,
+.feature-card:hover,
+.speaker:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+
+
+.gallery img{
+    width:100%;
+    transition:0.5s ease;
+}
+
+.gallery .card{
+    overflow:hidden;
+}
+
+.gallery .card:hover img{
+    transform:scale(1.1);
+}
+
+
+.card,
+.feature-card,
+.speaker {
+    position: relative;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.35),
+        inset 0 0 20px rgba(255, 255, 255, 0.05);
+    color: white !important;
+    transition: 0.4s ease;
+}
+
+
+.card::before,
+.feature-card::before,
+.speaker::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(135deg, #00ffff, #6610f2, #0dcaf0);
+    -webkit-mask: 
+        linear-gradient(#000 0 0) content-box, 
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.6;
+}
+
+
+.card:hover,
+.feature-card:hover,
+.speaker:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.5),
+        0 0 25px rgba(0, 255, 255, 0.6);
+}
+
+
